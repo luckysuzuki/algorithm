@@ -1,0 +1,4 @@
+{
+    "dotnet.projects.enableFileBasedPrograms": true,
+    "dotnet.fileBasedApps.enableAutomaticDiscovery": true
+}
