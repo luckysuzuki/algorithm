@@ -28,7 +28,7 @@ public class Solution
                 if (left > i + 1 && nums[left] == nums[left - 1])
                 {
                     continue;
-                }
+                }//跳过重复数字y
                 while (left < right && nums[left] + nums[right] > -nums[i])
                 {
                     right--;

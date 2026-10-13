@@ -2,6 +2,14 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "C#: Build current file for debugging",
+            "type": "process",
+            "command": "dotnet",
+            "args": ["build", "${file}", "--configuration", "Debug", "--output", "${workspaceFolder}/.debug"],
+            "options": { "cwd": "${fileDirname}" },
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "C#: Build current file",
             "type": "process",
             "command": "dotnet",

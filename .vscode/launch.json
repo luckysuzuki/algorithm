@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: Debug current file",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "C#: Build current file for debugging",
+            "program": "${workspaceFolder}/.debug/${fileBasenameNoExtension}.dll",
+            "cwd": "${fileDirname}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}

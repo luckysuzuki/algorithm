@@ -1,4 +1,5 @@
 {
     "dotnet.projects.enableFileBasedPrograms": true,
-    "dotnet.fileBasedApps.enableAutomaticDiscovery": true
+    "dotnet.fileBasedApps.enableAutomaticDiscovery": true,
+    "dotnet.preferCSharpExtension": true
 }

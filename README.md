@@ -69,7 +69,15 @@ dotnet run --file .\1_TwoSum\Program.cs
 
 Two Sum 示例的预期输出是 `[0, 1]`。文件上半部分是本地测试入口，下半部分是 `Solution` 类；提交到 LeetCode 时通常只提交 `Solution` 类，不提交本地测试入口或 `#:property` 指令。
 
-编译产物由 SDK 放在系统临时目录中，不会在每道题目录生成 `bin`、`obj`。可以用 `dotnet clean .\1_TwoSum\Program.cs` 清理这道题的编译产物。
+普通编译、运行任务的产物由 SDK 放在系统临时目录中，不会在每道题目录生成 `bin`、`obj`。可以用 `dotnet clean .\1_TwoSum\Program.cs` 清理这道题的编译产物。
+
+## 在 VS Code 调试
+
+打开要调试的 `Program.cs`，保存后在行号左边点击设置断点。运行和调试面板选择 `C#: Debug current file`，按 `F5` 启动；调试前会自动编译当前文件。
+
+此工作区使用 C# 扩展独立模式和明确的 `coreclr` 配置，绕开本机 C# Dev Kit 自动调试时单步请求无响应的问题。调试编译产物放在根目录 `.debug/`，已加入 Git 忽略列表；每道题仍只需要一个 `Program.cs`。
+
+停在断点后，可点击顶部浮窗的“继续”“逐过程”“单步调试”按钮。快捷键以按钮提示为准：VS Code 默认逐过程为 `F10`；安装 IntelliJ IDEA Keybindings 后通常为 `F8`，继续为 `F9`。如果需要 `Console.ReadLine()` 输入，将 `.vscode/launch.json` 的 `console` 改为 `integratedTerminal`。
 
 ## 以后需要传统项目时
 
